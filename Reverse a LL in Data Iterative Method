@@ -1,0 +1,24 @@
+public Node getNodeAt(int idx){
+      Node curr = head;
+      for(int i=0; i<idx; i++){
+        curr = curr.next;
+      }
+      return curr;
+    }
+    public void swap(Node left, Node right){
+      int leftData = left.data;
+      left.data = right.data;
+      right.data = leftData;
+    }
+    public void reverseDI() {
+      // write your code here
+      int left = 0, right = size -1;
+      while(left < right){
+        Node leftNode =getNodeAt(left);
+        Node rightNode =getNodeAt(right);
+
+        swap(leftNode , rightNode);
+        left++; right--;
+      }
+    }
+  }
