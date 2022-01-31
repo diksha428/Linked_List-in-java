@@ -7,7 +7,6 @@ public void reversePI(){
         curr.next=prev;
         prev=curr;
         curr=ahead;
-
       }
       Node temp=head;
       head=tail;
