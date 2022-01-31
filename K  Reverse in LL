@@ -1,0 +1,39 @@
+public void kReverse(int k) {
+      // write your code here
+      LinkedList prev = new LinkedList();
+
+      while(size > 0){
+        LinkedList curr = new LinkedList();
+
+        if(size < k){
+          //if group is partially filled 
+          while(size > 0){
+            int val = head.data;
+            this.removeFirst();
+            curr.addLast(val);
+          }
+      }
+        else{
+        //extracting a group of size k (first group)
+        for(int i=0;i<k;i++){
+          int val = head.data;
+          this.removeFirst();
+          curr.addFirst(val);
+         }
+      }
+        if(prev.head == null){
+          //when we have extracted our first group (30 ,20 ,10 )
+          prev =curr;
+        }else{
+          //adding one group of size k in
+          prev.tail.next =curr.head;
+          prev.tail = curr.tail;
+          prev.size += curr.size;
+        }
+      }
+          prev.tail.next = null;
+          this.head = prev.head;
+          this.tail = prev.tail;
+          this.size +=prev.size;
+    }
+  }
