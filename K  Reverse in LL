@@ -1,7 +1,6 @@
 public void kReverse(int k) {
       // write your code here
       LinkedList prev = new LinkedList();
-
       while(size > 0){
         LinkedList curr = new LinkedList();
 
