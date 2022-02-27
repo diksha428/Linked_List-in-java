@@ -14,7 +14,6 @@ public static class LLToQueueAdapter {
       // write your code here
        list.addLast(val);
     }
-
     int remove() {
       // write your code here
        if(size()==0){
